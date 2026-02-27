@@ -1,0 +1,93 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* BASE */
+    --bg-primary: #FDF6EC;
+    --bg-secondary: #FFF8F0;
+    --bg-card: #FFFFFF;
+    --bg-elevated: #FFF1E0;
+
+    /* PLAYERS */
+    --player-1: #6BCB77;
+    --player-1-light: #E8F8EA;
+    --player-1-dark: #4AA656;
+    --player-2: #FF6B8A;
+    --player-2-light: #FFE8ED;
+    --player-2-dark: #D94A68;
+
+    /* POINTS */
+    --accent-points: #FFB347;
+    --accent-points-light: #FFF0DB;
+    --accent-points-dark: #E0922D;
+
+    /* FUNCTIONAL */
+    --accent-warning: #FF8C42;
+    --accent-info: #7EB6FF;
+    --accent-purple: #B197FC;
+    --accent-yellow: #FFD93D;
+
+    /* TEXT */
+    --text-primary: #2D2A26;
+    --text-secondary: #6B6560;
+    --text-muted: #A8A29E;
+    --text-on-color: #FFFFFF;
+
+    /* BORDERS */
+    --border-subtle: #F0E6D8;
+    --border-card: #EDE4D6;
+    --border-active: #D9CFC0;
+
+    /* STATES */
+    --success: #6BCB77;
+    --error: #FF6B6B;
+    --disputed: #FF8C42;
+    --pending: #A8A29E;
+
+    /* SHADOWS */
+    --shadow-sm: 0 1px 3px rgba(45, 42, 38, 0.06);
+    --shadow-md: 0 4px 12px rgba(45, 42, 38, 0.08);
+    --shadow-lg: 0 8px 24px rgba(45, 42, 38, 0.10);
+
+    /* RADIUS */
+    --radius-sm: 10px;
+    --radius-md: 14px;
+    --radius-lg: 20px;
+    --radius-xl: 28px;
+    --radius-full: 9999px;
+
+    /* SPACING */
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 20px;
+    --space-6: 24px;
+    --space-8: 32px;
+    --space-10: 40px;
+    --space-12: 48px;
+
+    /* TYPOGRAPHY */
+    --font-display: 'Bricolage Grotesque', sans-serif;
+    --font-body: 'Outfit', sans-serif;
+    --text-score: 3rem;
+    --text-points-popup: 1.75rem;
+    --text-h1: 1.5rem;
+    --text-h2: 1.125rem;
+    --text-h3: 1rem;
+    --text-body: 0.9375rem;
+    --text-small: 0.8125rem;
+    --text-tiny: 0.6875rem;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
