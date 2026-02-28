@@ -32,7 +32,7 @@ export default function Register() {
     setLoading(true)
 
     try {
-      const { data, error: authError } = await supabase.auth.signUp({
+      const { error: authError } = await supabase.auth.signUp({
         email: email.trim(),
         password,
         options: {
@@ -41,16 +41,7 @@ export default function Register() {
       })
       if (authError) throw authError
 
-      // Create profile row
-      if (data.user) {
-        const { error: profileError } = await supabase.from('profiles').insert({
-          id: data.user.id,
-          email: email.trim(),
-          username: username.trim(),
-        })
-        if (profileError) throw profileError
-      }
-
+      // Profile is created automatically by DB trigger
       navigate('/onboarding', { replace: true })
     } catch (err) {
       const message = err instanceof Error ? err.message : 'Error al crear la cuenta'
